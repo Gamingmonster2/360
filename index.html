@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#0f172a">
+    <title>Universal Calculator v3.0</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Cairo:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="app-container" id="appContainer">
+        <!-- Header / Toolbar -->
+        <header class="app-header">
+            <div class="header-left">
+                <select id="langSelect" class="lang-select" aria-label="Select Language"></select>
+            </div>
+            <div class="header-right">
+                <button id="degRadToggle" class="btn-toggle">DEG</button>
+                <button id="themeToggle" class="btn-toggle" aria-label="Toggle Theme">🌙</button>
+            </div>
+        </header>
+
+        <!-- Display Screen -->
+        <main class="display-screen">
+            <div class="history-display" id="historyDisplay"></div>
+            <div class="current-input" id="currentInput" aria-live="polite">0</div>
+        </main>
+
+        <!-- Keypad Grid -->
+        <section class="keypad-grid" id="keypadGrid">
+            <!-- Buttons are dynamically injected via JS for cleaner code -->
+        </section>
+
+        <!-- Footer Info -->
+        <footer class="app-footer">
+            <span id="footerCopy">Universal Engine v3.0</span>
+        </footer>
+    </div>
+
+    <!-- Welcome Modal -->
+    <div class="modal-overlay" id="welcomeModal">
+        <div class="modal-content">
+            <h2 id="modalTitle">Welcome</h2>
+            <p id="modalDesc">Experience the Minimalist Universal Calculator.</p>
+            <button id="modalCloseBtn" class="btn-primary">OK</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
